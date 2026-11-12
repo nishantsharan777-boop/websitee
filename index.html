@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISHAAN ENTERPRISES | Electrical Distributor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #101d35;
+  --gold: #e9ad45;
+  --light: #f5f7fa;
+  --text: #172238;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--light);
+  color: var(--text);
+}
+
+.wrap {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: var(--navy);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 5px 25px #0003;
+}
+
+nav {
+  min-height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Manrope', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  color: white;
+}
+
+.logo span { color: var(--gold); }
+
+.logo:hover { text-shadow: 0 0 15px #e9ad4580; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover { color: var(--gold); }
+
+/* SEARCH BAR */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-container input {
+  width: 155px;
+  padding: 11px;
+  border: 1px solid #d5dce6;
+  border-radius: 7px;
+  outline: none;
+}
+
+.search-container button {
+  padding: 11px 13px;
+  border: none;
+  border-radius: 7px;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-container button:hover { background: white; }
+
+/* HOMEPAGE */
+
+.hero {
+  min-height: 650px;
+  background:
+    radial-gradient(circle at 15% 20%, #e9ad4520, transparent 30%),
+    radial-gradient(circle at 85% 75%, #31578370, transparent 35%),
+    linear-gradient(125deg, #091426, #172d4e, #101d35);
+  color: white;
+  padding: 110px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero small {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 5px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(48px, 8vw, 88px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 25px 0;
+  letter-spacing: 2px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+  text-shadow: 0 0 25px #e9ad4540;
+}
+
+.hero h2 {
+  font-size: clamp(20px, 3vw, 30px);
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: auto;
+  color: #d5deeb;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 17px 32px;
+  border-radius: 8px;
+  margin-top: 28px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 30px #e9ad4530;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  background: white;
+}
+
+/* GENERAL SECTIONS */
+
+section { padding: 85px 0; }
+
+.heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.heading small {
+  color: #b77a1c;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.heading h2 {
+  font-family: Manrope, sans-serif;
+  font-size: 36px;
+  margin: 12px 0;
+}
+
+.heading p { color: #68758a; }
+
+/* PRODUCTS */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background: white;
+  padding: 30px 22px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 5px 20px #17294710;
+  transition: .3s;
+  scroll-margin-top: 120px;
+}
+
+.product:hover { transform: translateY(-7px); }
+
+.product .icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.product h3 { margin-bottom: 10px; }
+
+.product p {
+  color: #68758a;
+  font-size: 14px;
+}
+
+.product.highlight {
+  border: 2px solid var(--gold);
+  box-shadow: 0 5px 20px #e9ad4560;
+}
+
+#searchMessage {
+  text-align: center;
+  margin-bottom: 22px;
+  color: #a46c13;
+  font-weight: 600;
+}
+
+/* ABOUT */
+
+.about { background: white; }
+
+.about-content {
+  max-width: 850px;
+  text-align: center;
+  margin: auto;
+}
+
+.about-content h2 {
+  font-family: Manrope, sans-serif;
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #68758a;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+/* BRANDS */
+
+.brands { background: #edf1f6; }
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.brand {
+  background: white;
+  padding: 30px 15px;
+  text-align: center;
+  border-radius: 12px;
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  box-shadow: 0 4px 15px #1729470a;
+  transition: .3s;
+}
+
+.brand:hover {
+  transform: translateY(-5px);
+  border-bottom: 3px solid var(--gold);
+}
+
+.brand span {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  color: #68758a;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* CONTACT */
+
+.contact {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: Manrope, sans-serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  color: #c5d0df;
+  margin: 12px;
+  font-size: 16px;
+}
+
+.contact .btn { margin: 25px 8px 0; }
+
+/* WEBSITE QR CODE */
+
+.qr-card {
+  max-width: 390px;
+  margin: 55px auto 10px;
+  padding: 30px 22px;
+  background: white;
+  border-radius: 18px;
+  color: var(--navy);
+  box-shadow: 0 12px 35px #0003;
+}
+
+.qr-card h3 {
+  font-family: Manrope, sans-serif;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.qr-card p {
+  color: #68758a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.qr-image {
+  width: 220px;
+  height: 220px;
+  max-width: 100%;
+  display: block;
+  margin: 22px auto;
+  padding: 10px;
+  border: 3px solid var(--gold);
+  border-radius: 12px;
+  background: white;
+}
+
+.qr-note {
+  font-size: 12px !important;
+  color: #a46c13 !important;
+  margin-top: 12px !important;
+}
+
+.qr-button {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.qr-button:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* FOOTER */
+
+footer {
+  background: #091426;
+  color: #aebbd0;
+  padding: 25px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #20b968;
+  color: white;
+  padding: 14px 19px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 20px #0003;
+  z-index: 20;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 750px) {
+  nav {
+    padding: 15px 0;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 23px;
+    letter-spacing: .5px;
+  }
+
+  nav a { margin: 5px; }
+
+  .search-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-container input { width: min(65%, 300px); }
+
+  .hero {
+    min-height: 550px;
+    padding: 85px 0;
+  }
+
+  .hero p { font-size: 15px; }
+
+  .hero small {
+    letter-spacing: 2px;
+    font-size: 11px;
+  }
+
+  section { padding: 60px 0; }
+
+  .heading h2,
+  .contact h2 { font-size: 29px; }
+
+  .qr-card { padding: 25px 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+<div class="wrap">
+<nav>
+
+  <div class="logo">
+    ⚡ ISHAAN <span>ENTERPRISES</span>
+  </div>
+
+  <div>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#brands">Brands</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="productSearch"
+      placeholder="Search products..."
+      aria-label="Search products">
+    <button onclick="searchProducts()">🔍 Search</button>
+  </div>
+
+</nav>
+</div>
+</header>
+
+<!-- HOMEPAGE -->
+
+<section class="hero" id="home">
+<div class="wrap">
+
+  <small>⚡ WELCOME TO ISHAAN ENTERPRISES ⚡</small>
+
+  <h1>
+    ISHAAN<br>
+    <span>ENTERPRISES</span>
+  </h1>
+
+  <h2>POWERING EVERY CONNECTION.</h2>
+
+  <p>
+    Your trusted destination for quality electrical
+    products and reliable brands. Bringing innovation,
+    performance and excellence together under one roof.
+  </p>
+
+  <a href="#products" class="btn">
+    EXPLORE OUR PRODUCTS →
+  </a>
+
+  <div style="margin-top:40px;color:#e9ad45;font-size:13px;letter-spacing:2px;font-weight:bold;line-height:2;">
+    LEGRAND • PANASONIC • ANCHOR •
+    SCHNEIDER • WIPRO • BAJAJ
+  </div>
+
+</div>
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="products">
+<div class="wrap">
+
+  <div class="heading">
+    <small>OUR PRODUCTS</small>
+    <h2>Quality For Every Connection</h2>
+    <p>Electrical solutions for homes, businesses and projects.</p>
+  </div>
+
+  <p id="searchMessage" aria-live="polite"></p>
+
+  <div class="products">
+
+    <div class="product">
+      <div class="icon">🔌</div>
+      <h3>Switches & Sockets</h3>
+      <p>Modular switches, sockets and accessories.</p>
+    </div>
+
+    <div class="product">
+      <div class="icon">💡</div>
+      <h3>LED Lighting</h3>
+      <p>LED bulbs, panel lights and lighting solutions.</p>
+    </div>
+
+    <div class="product">
+      <div class="icon">〰️</div>
+      <h3>Wires & Cables</h3>
+      <p>Electrical wires and cable solutions.</p>
+    </div>
+
+    <div class="product">
+      <div class="icon">⚙️</div>
+      <h3>MCBs & Protection</h3>
+      <p>Electrical protection and distribution products.</p>
+    </div>
+
+    <div class="product">
+      <div class="icon">🌀</div>
+      <h3>Fans</h3>
+      <p>Fans and ventilation products.</p>
+    </div>
+
+    <div class="product">
+      <div class="icon">🔋</div>
+      <h3>Electrical Accessories</h3>
+      <p>Electrical fittings and installation essentials.</p>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ABOUT US -->
+
+<section class="about" id="about">
+<div class="wrap about-content">
+
+  <div class="heading">
+    <small>ABOUT OUR BUSINESS</small>
+    <h2>Connecting Quality With Trust.</h2>
+  </div>
+
+  <p>
+    Ishaan Enterprises is dedicated to providing dependable
+    electrical products from trusted brands. We aim to serve
+    retailers, electricians, contractors and customers with
+    quality products and a customer-first approach.
+
+    <br><br>
+
+    Our goal is to make electrical sourcing convenient,
+    reliable and accessible for every requirement.
+  </p>
+
+</div>
+</section>
+
+<!-- OUR BRANDS -->
+
+<section class="brands" id="brands">
+<div class="wrap">
+
+  <div class="heading">
+    <small>OUR BRAND PARTNERS</small>
+    <h2>Brands We Deal In</h2>
+    <p>Recognised names in the electrical industry.</p>
+  </div>
+
+  <div class="brand-grid">
+
+    <div class="brand">
+      LEGRAND
+      <span>Electrical Solutions</span>
+    </div>
+
+    <div class="brand">
+      PANASONIC
+      <span>Electrical Products</span>
+    </div>
+
+    <div class="brand">
+      ANCHOR
+      <span>Switches & Accessories</span>
+    </div>
+
+    <div class="brand">
+      SCHNEIDER ELECTRIC
+      <span>Energy Management</span>
+    </div>
+
+    <div class="brand">
+      WIPRO
+      <span>Lighting Solutions</span>
+    </div>
+
+    <div class="brand">
+      BAJAJ ELECTRICALS
+      <span>Electrical Products</span>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- CONTACT + WEBSITE QR CODE -->
+
+<section class="contact" id="contact">
+<div class="wrap">
+
+  <small style="color:#e9ad45;letter-spacing:3px">
+    GET IN TOUCH
+  </small>
+
+  <h2>Let's Connect!</h2>
+
+  <p><strong>ISHAAN ENTERPRISES</strong></p>
+  <p>📍 Peeragarhi, New Delhi</p>
+  <p>📞 +91 8826266478</p>
+  <p>🕒 Business Hours: 8:00 AM – 5:00 PM</p>
+
+  <a href="tel:+918826266478" class="btn">
+    CALL US
+  </a>
+
+  <a
+    href="https://wa.me/918826266478?text=Hello%20Ishaan%20Enterprises%2C%20I%20have%20a%20product%20enquiry."
+    class="btn"
+    target="_blank"
+    rel="noopener"
+  >
+    WHATSAPP US
+  </a>
+
+  <!-- QR CODE CARD -->
+
+  <div class="qr-card">
+
+    <h3>SCAN TO VISIT US</h3>
+
+    <p>
+      Scan this QR code with your mobile camera
+      to visit the official website of
+      <strong>ISHAAN ENTERPRISES</strong>.
+    </p>
+
+    <img
+      id="websiteQR"
+      class="qr-image"
+      alt="Ishaan Enterprises website QR code"
+    >
+
+    <p>⚡ ISHAAN ENTERPRISES</p>
+
+    <p class="qr-note">
+      Temporary QR link: replace it with your published
+      website address before sharing.
+    </p>
+
+    <a
+      id="qrVisitLink"
+      class="qr-button"
+      href="https://example.com"
+      target="_blank"
+      rel="noopener"
+    >
+      VISIT WEBSITE →
+    </a>
+
+  </div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  © <span id="year"></span> Ishaan Enterprises.
+  All Rights Reserved.
+  <br>
+  Powering Connections. Delivering Trust. ⚡
+</footer>
+
+<a
+  class="whatsapp"
+  href="https://wa.me/918826266478"
+  target="_blank"
+  rel="noopener"
+>
+  ☏ WhatsApp
+</a>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// CURRENT YEAR
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+// WEBSITE QR CODE
+
+// IMPORTANT:
+// Replace this temporary URL with your actual published
+// website address after publishing your website.
+
+const WEBSITE_URL = "https://example.com";
+
+const qrImage = document.getElementById("websiteQR");
+
+qrImage.src =
+  "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" +
+  encodeURIComponent(WEBSITE_URL);
+
+document.getElementById("qrVisitLink").href = WEBSITE_URL;
+
+
+// PRODUCT SEARCH
+
+function searchProducts() {
+
+  const input = document
+    .getElementById("productSearch")
+    .value.trim().toLowerCase();
+
+  const products =
+    document.querySelectorAll(".product");
+
+  const message =
+    document.getElementById("searchMessage");
+
+  products.forEach(product => {
+    product.classList.remove("highlight");
+  });
+
+  if (!input) {
+    message.textContent = "Please enter a product name.";
+    return;
+  }
+
+  let matches = [];
+
+  products.forEach(product => {
+
+    const text = product.innerText.toLowerCase();
+
+    if (text.includes(input)) {
+      product.classList.add("highlight");
+      matches.push(product);
+    }
+
+  });
+
+  if (matches.length > 0) {
+
+    message.textContent =
+      matches.length + " matching product category found.";
+
+    document.getElementById("products").scrollIntoView({
+      behavior: "smooth"
+    });
+
+    setTimeout(() => {
+      matches[0].scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }, 400);
+
+  } else {
+
+    message.textContent =
+      "Sorry! No matching product category found.";
+
+    document.getElementById("products").scrollIntoView({
+      behavior: "smooth"
+    });
+
+  }
+
+}
+
+
+// ENTER KEY SEARCH
+
+document
+  .getElementById("productSearch")
+  .addEventListener("keydown", function(event) {
+
+    if (event.key === "Enter") {
+      searchProducts();
+    }
+
+  });
+
+</script>
+
+</body>
+</html>
